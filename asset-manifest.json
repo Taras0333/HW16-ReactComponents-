@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/HW16-ReactComponents-/static/css/main.3585fe83.chunk.css",
-    "main.js": "/HW16-ReactComponents-/static/js/main.f8313706.chunk.js",
-    "main.js.map": "/HW16-ReactComponents-/static/js/main.f8313706.chunk.js.map",
+    "main.css": "/HW16-ReactComponents-/static/css/main.90d00006.chunk.css",
+    "main.js": "/HW16-ReactComponents-/static/js/main.3afdd248.chunk.js",
+    "main.js.map": "/HW16-ReactComponents-/static/js/main.3afdd248.chunk.js.map",
     "runtime-main.js": "/HW16-ReactComponents-/static/js/runtime-main.89faa015.js",
     "runtime-main.js.map": "/HW16-ReactComponents-/static/js/runtime-main.89faa015.js.map",
-    "static/js/2.e1a0f1bd.chunk.js": "/HW16-ReactComponents-/static/js/2.e1a0f1bd.chunk.js",
-    "static/js/2.e1a0f1bd.chunk.js.map": "/HW16-ReactComponents-/static/js/2.e1a0f1bd.chunk.js.map",
+    "static/js/2.9b9def06.chunk.js": "/HW16-ReactComponents-/static/js/2.9b9def06.chunk.js",
+    "static/js/2.9b9def06.chunk.js.map": "/HW16-ReactComponents-/static/js/2.9b9def06.chunk.js.map",
     "index.html": "/HW16-ReactComponents-/index.html",
-    "precache-manifest.ef19ca4568cbf413ecb94f8285995736.js": "/HW16-ReactComponents-/precache-manifest.ef19ca4568cbf413ecb94f8285995736.js",
+    "precache-manifest.aa975735251bc116f29666b7ca3dc4d8.js": "/HW16-ReactComponents-/precache-manifest.aa975735251bc116f29666b7ca3dc4d8.js",
     "service-worker.js": "/HW16-ReactComponents-/service-worker.js",
-    "static/css/main.3585fe83.chunk.css.map": "/HW16-ReactComponents-/static/css/main.3585fe83.chunk.css.map",
-    "static/js/2.e1a0f1bd.chunk.js.LICENSE.txt": "/HW16-ReactComponents-/static/js/2.e1a0f1bd.chunk.js.LICENSE.txt",
+    "static/css/main.90d00006.chunk.css.map": "/HW16-ReactComponents-/static/css/main.90d00006.chunk.css.map",
+    "static/js/2.9b9def06.chunk.js.LICENSE.txt": "/HW16-ReactComponents-/static/js/2.9b9def06.chunk.js.LICENSE.txt",
     "static/media/index.css": "/HW16-ReactComponents-/static/media/751463.73d0609a.svg",
-    "static/media/logo.svg": "/HW16-ReactComponents-/static/media/logo.5d5d9eef.svg"
+    "static/media/anonimus.svg": "/HW16-ReactComponents-/static/media/anonimus.5d21e4c0.svg",
+    "static/media/female.svg": "/HW16-ReactComponents-/static/media/female.5c87994c.svg",
+    "static/media/logo.svg": "/HW16-ReactComponents-/static/media/logo.5d5d9eef.svg",
+    "static/media/male.svg": "/HW16-ReactComponents-/static/media/male.07582995.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.89faa015.js",
-    "static/js/2.e1a0f1bd.chunk.js",
-    "static/css/main.3585fe83.chunk.css",
-    "static/js/main.f8313706.chunk.js"
+    "static/js/2.9b9def06.chunk.js",
+    "static/css/main.90d00006.chunk.css",
+    "static/js/main.3afdd248.chunk.js"
   ]
 }
