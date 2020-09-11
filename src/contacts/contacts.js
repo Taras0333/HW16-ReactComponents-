@@ -65,9 +65,9 @@ class Contacts extends Component {
     });
   };
   find = () => {
-    let word = this.state.person;
+    let word = this.state.person.toLowerCase();
     this.state.contacts.filter((e) => {
-      if (e.lastName.includes(word)) {
+      if (e.lastName.toLowerCase().includes(word)) {
         this.setState({
           search: "" + e.firstName + " " + e.lastName + " " + e.phone,
           gend: e.gender,
