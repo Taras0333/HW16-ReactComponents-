@@ -98,6 +98,18 @@ code {
   -moz-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
 }
+.finded2 {
+  width: 95%;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
+}
 .gender-icon {
   width: 15px;
   height: 15px;

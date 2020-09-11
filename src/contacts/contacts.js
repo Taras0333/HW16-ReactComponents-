@@ -47,10 +47,11 @@ class Contacts extends Component {
     st: "false",
     search: "",
     gend: "",
+    search2: "",
   };
+
   setImg = (gender) => {
     if (gender === "male") {
-      console.log("true");
       return maleLogo;
     } else if (gender === "female") {
       return femaleLogo;
@@ -64,7 +65,9 @@ class Contacts extends Component {
       person: value,
     });
   };
+
   find = () => {
+    let count = 0;
     let word = this.state.person.toLowerCase();
     this.state.contacts.filter((e) => {
       if (e.lastName.toLowerCase().includes(word)) {
@@ -73,6 +76,28 @@ class Contacts extends Component {
           gend: e.gender,
           st: "true",
         });
+      } else if (e.firstName.toLowerCase().includes(word)) {
+        this.setState({
+          search: "" + e.firstName + " " + e.lastName + " " + e.phone,
+          gend: e.gender,
+          st: "true",
+        });
+      } else if (e.phone.toLowerCase().includes(word)) {
+        if (count === 0) {
+          count += 1;
+          console.log("h");
+          this.setState({
+            search: "" + e.firstName + " " + e.lastName + " " + e.phone,
+            gend: e.gender,
+            st: "true",
+          });
+        } else if (count === 1) {
+          this.setState({
+            search2: "" + e.firstName + " " + e.lastName + " " + e.phone,
+            gend: e.gender,
+            st: "true",
+          });
+        }
       }
     });
   };
@@ -105,6 +130,14 @@ class Contacts extends Component {
         <div className="response">
           <p className="finded">
             {this.state.search}
+            <img
+              className="gender-icon"
+              src={this.setImg(this.state.gend)}
+              alt="img"
+            />
+          </p>
+          <p className="finded2">
+            {this.state.search2}
             <img
               className="gender-icon"
               src={this.setImg(this.state.gend)}
