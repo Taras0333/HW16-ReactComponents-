@@ -49,6 +49,15 @@ class Contacts extends Component {
     gend: "",
     search2: "",
   };
+  get isActive() {
+    const active = "display: flex";
+    const notActive = "display: none";
+    if (this.state.search2) {
+      return "flex";
+    } else {
+      return "none";
+    }
+  }
 
   setImg = (gender) => {
     if (gender === "male") {
@@ -85,7 +94,6 @@ class Contacts extends Component {
       } else if (e.phone.toLowerCase().includes(word)) {
         if (count === 0) {
           count += 1;
-          console.log("h");
           this.setState({
             search: "" + e.firstName + " " + e.lastName + " " + e.phone,
             gend: e.gender,
@@ -136,7 +144,7 @@ class Contacts extends Component {
               alt="img"
             />
           </p>
-          <p className="finded2">
+          <p className="finded2" style={{ display: this.isActive }}>
             {this.state.search2}
             <img
               className="gender-icon"
