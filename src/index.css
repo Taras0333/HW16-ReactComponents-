@@ -24,9 +24,10 @@ code {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   background-color: white;
+  padding-top: 10px;
 }
 .wrap {
   width: 95%;
@@ -39,6 +40,7 @@ code {
   -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
+  margin-bottom: 17px;
 }
 .item {
   margin-right: 5px;
@@ -49,7 +51,7 @@ code {
 .input {
   width: 85%;
   height: 20px;
-
+  margin-bottom: 25px;
   border: none;
   border-radius: 14px;
   outline: none;
@@ -73,43 +75,12 @@ code {
   -moz-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
   cursor: pointer;
+  margin-bottom: 25px;
 }
 .btn:hover {
   background-color: rosybrown;
 }
-.response {
-  width: 350px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
-}
-.finded {
-  width: 95%;
-  border-radius: 14px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5px 5px;
-  cursor: pointer;
-  -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
-}
-.finded2 {
-  width: 95%;
-  border-radius: 14px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 5px 5px;
-  cursor: pointer;
-  -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.75);
-}
+
 .gender-icon {
   width: 15px;
   height: 15px;

@@ -43,21 +43,10 @@ class Contacts extends Component {
         gender: "male",
       },
     ],
+
     person: "Default",
-    st: "false",
-    search: "",
-    gend: "",
-    search2: "",
+    isActive: false,
   };
-  get isActive() {
-    const active = "display: flex";
-    const notActive = "display: none";
-    if (this.state.search2) {
-      return "flex";
-    } else {
-      return "none";
-    }
-  }
 
   setImg = (gender) => {
     if (gender === "male") {
@@ -75,86 +64,47 @@ class Contacts extends Component {
     });
   };
 
-  find = () => {
-    let count = 0;
-    let word = this.state.person.toLowerCase();
-    this.state.contacts.filter((e) => {
-      if (e.lastName.toLowerCase().includes(word)) {
-        this.setState({
-          search: "" + e.firstName + " " + e.lastName + " " + e.phone,
-          gend: e.gender,
-          st: "true",
-        });
-      } else if (e.firstName.toLowerCase().includes(word)) {
-        this.setState({
-          search: "" + e.firstName + " " + e.lastName + " " + e.phone,
-          gend: e.gender,
-          st: "true",
-        });
-      } else if (e.phone.toLowerCase().includes(word)) {
-        if (count === 0) {
-          count += 1;
-          this.setState({
-            search: "" + e.firstName + " " + e.lastName + " " + e.phone,
-            gend: e.gender,
-            st: "true",
-          });
-        } else if (count === 1) {
-          this.setState({
-            search2: "" + e.firstName + " " + e.lastName + " " + e.phone,
-            gend: e.gender,
-            st: "true",
-          });
-        }
-      }
-    });
+  find = (e) => {
+    this.setState((prevState) => ({
+      contacts: prevState.contacts.filter((el) => {
+        return (
+          el.firstName.toLowerCase().indexOf(this.state.person.toLowerCase()) >
+            -1 ||
+          el.lastName.toLowerCase().indexOf(this.state.person.toLowerCase()) >
+            -1 ||
+          el.phone.indexOf(this.state.person) > -1
+        );
+      }),
+      isActive: true,
+    }));
   };
 
   render() {
-    if (this.state.st === "false") {
-      return (
-        <div className="wrapper">
-          <input
-            className="input"
-            placeholder="find person"
-            velue={this.state.title}
-            onChange={this.changeTitle}
-          ></input>
-          <button className="btn" onClick={this.find}>
-            submit
-          </button>
-          {this.state.contacts.map((contact) => (
-            <Cont
-              firstName={contact.firstName}
-              lastName={contact.lastName}
-              phone={contact.phone}
-              gender={this.setImg(contact.gender)}
-            />
-          ))}
-        </div>
-      );
-    } else {
-      return (
-        <div className="response">
-          <p className="finded">
-            {this.state.search}
-            <img
-              className="gender-icon"
-              src={this.setImg(this.state.gend)}
-              alt="img"
-            />
-          </p>
-          <p className="finded2" style={{ display: this.isActive }}>
-            {this.state.search2}
-            <img
-              className="gender-icon"
-              src={this.setImg(this.state.gend)}
-              alt="img"
-            />
-          </p>
-        </div>
-      );
-    }
+    return (
+      <div className="wrapper">
+        {!this.state.isActive && (
+          <>
+            <input
+              className="input"
+              placeholder="find person"
+              onChange={this.changeTitle}
+            ></input>
+            <button className="btn" onClick={this.find}>
+              submit
+            </button>
+          </>
+        )}
+
+        {this.state.contacts.map((contact) => (
+          <Cont
+            firstName={contact.firstName}
+            lastName={contact.lastName}
+            phone={contact.phone}
+            gender={this.setImg(contact.gender)}
+          />
+        ))}
+      </div>
+    );
   }
 }
 export default Contacts;
